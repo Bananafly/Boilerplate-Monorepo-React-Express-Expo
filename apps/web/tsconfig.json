@@ -1,0 +1,37 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "allowImportingTsExtensions": true,
+    "noErrorTruncation": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "react": ["./node_modules/@types/react"]
+    }
+  },
+  "include": [
+    "src",
+    ".storybook/**/*",
+    "__mocks__/**/*",
+    "*.ts",
+    "*.tsx",
+    "vite-env.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}

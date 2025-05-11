@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@monorepo/web/*": ["apps/web/src/*"],
+      "@monorepo/api/*": ["apps/api/src/*"],
+      "@monorepo/shared/*": ["packages/shared/src/*"]
+    }
+  }
+}
