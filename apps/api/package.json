@@ -1,0 +1,41 @@
+{
+  "name": "@monorepo/api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts,.js",
+    "lint:fix": "eslint src --ext .ts,.js --fix"
+  },
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "^5.0.27",
+    "@clerk/express": "^1.4.17",
+    "@monorepo/shared": "*",
+    "@prisma/client": "^6.7.0",
+    "cls-hooked": "^4.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "module-alias": "^2.2.3",
+    "node-cache": "^5.1.2",
+    "svix": "^1.30.0",
+    "zod": "^3.23.8"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@clerk/types": "^4.13.1",
+    "@types/cls-hooked": "^4.3.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/module-alias": "^2.0.4",
+    "@types/node": "^22.15.17",
+    "nodemon": "^3.0.2",
+    "prettier-plugin-prisma": "^5.0.0",
+    "prisma": "^6.7.0"
+  }
+}
