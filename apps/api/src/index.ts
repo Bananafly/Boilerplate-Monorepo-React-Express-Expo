@@ -4,30 +4,10 @@ import express, { Request, Response, NextFunction } from 'express';
 import 'dotenv/config';
 import cors from 'cors';
 import { ClerkExpressRequireAuth } from '@clerk/clerk-sdk-node';
-import project from './routes/projectRouter';
-import webhooks from './routes/webhookRouter';
+import webhooks from './routes/webhook-router';
 
-import { setOrgIdInContext } from './middleware/setOrgIdInContext';
-
-export const requestTimingMiddleware = (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
-  const start = process.hrtime();
-
-  res.on('finish', () => {
-    const end = process.hrtime(start);
-    const duration = (end[0] * 1e9 + end[1]) / 1e6; // Convert to milliseconds
-    // eslint-disable-next-line no-console
-    console.log(`${req.method} ${req.originalUrl} - ${duration.toFixed(2)}ms`);
-  });
-
-  next();
-};
 const app = express();
 
-app.use(requestTimingMiddleware);
 app.use(cors());
 app.use(express.json());
 
@@ -38,14 +18,9 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
-app.use(
-  '/api/v1/projects',
-  ClerkExpressRequireAuth(),
-  setOrgIdInContext,
-  project,
-);
+// app.use('/api/v1/tasks', ClerkExpressRequireAuth(), tasks);
 
-app.use('/webhooks/v1', webhooks);
+// app.use('/webhooks/v1', webhooks);
 
 // Error handling middleware
 app.use(

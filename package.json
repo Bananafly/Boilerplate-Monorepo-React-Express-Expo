@@ -12,7 +12,7 @@
     "dev:web": "turbo run dev --filter=@monorepo/web",
     "dev:api": "turbo run dev --filter=@monorepo/api",
     "build": "turbo run build",
-    "start": "node apps/api/dist/index.js",
+    "start": "node apps/api/dist/index.ts",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix"
   },
@@ -39,6 +39,7 @@
     "globals": "^16.1.0",
     "lint-staged": "^16.0.0",
     "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
     "turbo": "^2.5.3",
     "typescript": "^5.8.3"
   }
