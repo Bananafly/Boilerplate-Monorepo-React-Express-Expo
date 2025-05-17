@@ -5,7 +5,7 @@ import { type TaskListItem, dtoToTasks } from "./transform";
 
 const getTasks = async (authToken: string): Promise<TaskListItem[]> => {
 	try {
-		const response = await apiClient.get<unknown>("/tasks", {
+		const response = await apiClient.get<unknown>("/api/v1/tasks", {
 			headers: {
 				// biome-ignore lint/style/useNamingConvention: I don't control the API
 				Authorization: `Bearer ${authToken}`,
