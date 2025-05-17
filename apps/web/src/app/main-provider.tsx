@@ -31,6 +31,7 @@ export default function AppProvider({ children }: AppProviderProps) {
       fallback={
         <div className="flex h-screen w-screen items-center justify-center">
           <Spinner size="xl" />
+          <p>Main Provider Fallback...</p>
         </div>
       }
     >

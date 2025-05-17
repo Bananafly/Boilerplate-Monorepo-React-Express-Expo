@@ -35,20 +35,19 @@ const createRouter = (/* queryClient: QueryClient */) =>
         {
           path: "/",
           lazy: async () => {
-            const { HomeRoute } = await import("./home.tsx");
+            const { HomePage } = await import("./app/home.tsx");
             // biome-ignore lint/style/useNamingConvention: We don't control the React Router API and it needs to be Capitalized
-            return { Component: HomeRoute };
+            return { Component: HomePage };
           },
         },
-        // {
-        //   path: 'Kunden',
-        //   lazy: async () => {
-        //     const { CustomerOverviewRoute } = await import(
-        //       './app/customers/overview.tsx'
-        //     );
-        //     return { Component: CustomerOverviewRoute };
-        //   },
-        // },
+        {
+          path: "/tasks",
+          lazy: async () => {
+            const { TasksPage } = await import("./tasks/tasks.tsx");
+            // biome-ignore lint/style/useNamingConvention: We don't control the React Router API and it needs to be Capitalized
+            return { Component: TasksPage };
+          },
+        },
       ],
     },
     {

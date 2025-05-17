@@ -1,15 +1,17 @@
-import { cn } from '@/utils/cn';
+/** @format */
+
+import { cn } from "@/utils/cn";
 
 const sizes = {
-  sm: 'h-4 w-4',
-  md: 'h-8 w-8',
-  lg: 'h-16 w-16',
-  xl: 'h-24 w-24',
+  sm: "h-4 w-4",
+  md: "h-8 w-8",
+  lg: "h-16 w-16",
+  xl: "h-24 w-24",
 };
 
 const variants = {
-  light: 'text-white',
-  primary: 'text-slate-600',
+  light: "text-white",
+  primary: "text-slate-600",
 };
 
 export type SpinnerProps = {
@@ -19,9 +21,9 @@ export type SpinnerProps = {
 };
 
 export function Spinner({
-  size = 'md',
-  variant = 'primary',
-  className = '',
+  size = "md",
+  variant = "primary",
+  className = "",
 }: SpinnerProps) {
   return (
     <>
@@ -36,10 +38,10 @@ export function Spinner({
         strokeLinecap="round"
         strokeLinejoin="round"
         className={cn(
-          'animate-spin',
+          "animate-spin",
           sizes[size],
           variants[variant],
-          className,
+          className
         )}
       >
         <path d="M21 12a9 9 0 1 1-6.219-8.56" />

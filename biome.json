@@ -40,6 +40,9 @@
           "level": "warn",
           "options": {}
         }
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
       }
     }
   },

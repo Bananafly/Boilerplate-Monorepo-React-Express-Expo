@@ -1,8 +1,8 @@
 /** @format */
 
-import { useUser } from "@clerk/clerk-react";
+import { UserButton, useUser } from "@clerk/clerk-react";
 
-function Home() {
+export function HomePage() {
   const { user } = useUser();
   if (!user) return null;
   const { firstName } = user;
@@ -10,10 +10,9 @@ function Home() {
   return (
     <div className="flex h-screen w-full flex-col">
       <div className="w-full py-8 text-center">
-        <h1 className="text-xl">Willkommen, {firstName}!</h1>
+        <h1 className="text-xl">Welcome, {firstName}!</h1>
+        <UserButton />
       </div>
     </div>
   );
 }
-
-export default Home;
