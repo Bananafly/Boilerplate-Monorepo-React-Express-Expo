@@ -1,8 +1,9 @@
 /** @format */
 
+import type { GetTasksDto } from "@monorepo/shared";
 import { PrismaClient } from "@prisma/client";
 
-const getTasksService = async (): Promise<any> => {
+const getTasksService = async (): Promise<GetTasksDto> => {
 	const prisma = new PrismaClient();
 
 	// if (!userId) {

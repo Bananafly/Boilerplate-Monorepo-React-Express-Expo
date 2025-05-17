@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "allowImportingTsExtensions": true,
     "noErrorTruncation": true,
+    "strictNullChecks": true,
     "paths": {
       "@/*": ["./src/*"],
       "react": ["./node_modules/@types/react"]
