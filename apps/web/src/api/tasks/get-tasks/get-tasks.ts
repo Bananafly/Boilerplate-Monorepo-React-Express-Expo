@@ -1,9 +1,9 @@
 import apiClient from "@/api/client.ts";
 
 import { getTasksSchema } from "@monorepo/shared";
-import { type TaskOverviewData, dtoToTasks } from "./transform";
+import { type TaskListItem, dtoToTasks } from "./transform";
 
-const getTasks = async (authToken: string): Promise<TaskOverviewData> => {
+const getTasks = async (authToken: string): Promise<TaskListItem[]> => {
 	try {
 		const response = await apiClient.get<unknown>("/tasks", {
 			headers: {
