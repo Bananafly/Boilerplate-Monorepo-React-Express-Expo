@@ -1,5 +1,10 @@
-/* eslint-disable import/prefer-default-export */
-import { Button } from '../ui/button';
+/**
+ * eslint-disable import/prefer-default-export
+ *
+ * @format
+ */
+
+import { Button } from "../ui/button";
 
 export function MainErrorFallback() {
   return (

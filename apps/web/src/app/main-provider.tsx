@@ -1,23 +1,24 @@
+/** @format */
+
+import { MainErrorFallback } from "@/components/errors/main";
+import { Spinner } from "@/components/ui/spinner";
+import { AuthProvider } from "@/context/auth-context";
+import { queryClient } from "@/lib/react-query";
 import {
   ClerkLoaded,
   ClerkLoading,
   ClerkProvider,
   SignedIn,
   SignedOut,
-} from '@clerk/clerk-react';
-import { QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import * as React from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
-import { HelmetProvider } from 'react-helmet-async';
-import { Toaster } from 'sonner';
+} from "@clerk/clerk-react";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import * as React from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import { HelmetProvider } from "react-helmet-async";
+import { Toaster } from "sonner";
 
-import { MainErrorFallback } from '@/components/errors/main';
-import { Spinner } from '@/components/ui/spinner';
-import { AuthProvider } from '@/context/auth-context';
-import { queryClient } from '@/lib/react-query';
-
-import { LoginRoute } from './routes/auth/login';
+import { LoginRoute } from "./routes/auth/login";
 
 type AppProviderProps = {
   children: React.ReactNode;
@@ -38,7 +39,7 @@ export default function AppProvider({ children }: AppProviderProps) {
           publishableKey={PUBLISHABLE_KEY}
           appearance={{
             elements: {
-              footer: 'hidden',
+              footer: "hidden",
             },
           }}
         >

@@ -1,9 +1,11 @@
-import * as React from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
-import { Outlet, useLocation } from 'react-router-dom';
+/** @format */
 
-import { Toaster } from '../ui/sonner';
-import { Spinner } from '../ui/spinner';
+import * as React from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import { Outlet, useLocation } from "react-router-dom";
+
+import { Toaster } from "../ui/sonner";
+import { Spinner } from "../ui/spinner";
 
 function RootLayout() {
   const location = useLocation();

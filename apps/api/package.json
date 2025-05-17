@@ -35,7 +35,8 @@
     "@types/module-alias": "^2.0.4",
     "@types/node": "^22.15.17",
     "nodemon": "^3.0.2",
-    "prettier-plugin-prisma": "^5.0.0",
-    "prisma": "^6.8.1"
+    "prisma": "^6.8.1",
+    "typescript": "^5.8.3",
+    "ts-node": "^10.9.2"
   }
 }

@@ -1,3 +1,3 @@
 /** @format */
 
-export * from './clerk-webhook-controller';
+export * from "./clerk-webhook-controller";

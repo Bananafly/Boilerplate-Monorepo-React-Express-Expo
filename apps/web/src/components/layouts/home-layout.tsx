@@ -1,6 +1,6 @@
-import { useUser } from '@clerk/clerk-react';
+/** @format */
 
-// eslint-disable-next-line import/no-restricted-paths
+import { useUser } from "@clerk/clerk-react";
 
 function Home() {
   const { user } = useUser();
@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="flex h-screen w-full flex-col">
       <div className="w-full py-8 text-center">
-        <h1 className="text-xl">Willkommen auf Meistr, {firstName}!</h1>
+        <h1 className="text-xl">Willkommen, {firstName}!</h1>
       </div>
     </div>
   );
