@@ -1,14 +1,17 @@
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
+/** @format */
 
-import './index.css';
-import App from './app';
+import * as React from "react";
+import { createRoot } from "react-dom/client";
 
-const root = document.getElementById('root');
-if (!root) throw new Error('No root element found');
+import "./index.css";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import App from "./app";
+
+const root = document.getElementById("root");
+if (!root) throw new Error("No root element found");
 
 createRoot(root).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

@@ -35,7 +35,7 @@ const createRouter = (/* queryClient: QueryClient */) =>
         {
           path: "/",
           lazy: async () => {
-            const { HomePage } = await import("./app/home.tsx");
+            const { HomePage } = await import("./home.tsx");
             // biome-ignore lint/style/useNamingConvention: We don't control the React Router API and it needs to be Capitalized
             return { Component: HomePage };
           },
@@ -46,6 +46,14 @@ const createRouter = (/* queryClient: QueryClient */) =>
             const { TasksPage } = await import("./tasks/tasks.tsx");
             // biome-ignore lint/style/useNamingConvention: We don't control the React Router API and it needs to be Capitalized
             return { Component: TasksPage };
+          },
+        },
+        {
+          path: "/calendar",
+          lazy: async () => {
+            const { CalendarPage } = await import("./calendar/calendar.tsx");
+            // biome-ignore lint/style/useNamingConvention: We don't control the React Router API and it needs to be Capitalized
+            return { Component: CalendarPage };
           },
         },
       ],

@@ -21,10 +21,9 @@ function RootLayout() {
         key={location.pathname}
         fallback={<div>Something went wrong!</div>}
       >
-        <div className="flex h-screen">
-          <div className="flex-1 overflow-auto p-4">
-            <Outlet />
-          </div>
+        <div className="flex h-screen bg-red-500">
+          <Outlet />
+          devsdafs
         </div>
         <Toaster />
       </ErrorBoundary>
