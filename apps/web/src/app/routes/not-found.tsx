@@ -1,4 +1,6 @@
-import { Link } from '@/components/ui/link';
+/** @format */
+
+import { Link } from "@/components/ui/link";
 
 export function NotFoundRoute() {
   return (
