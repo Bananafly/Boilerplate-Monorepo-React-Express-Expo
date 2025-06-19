@@ -10,7 +10,7 @@ export function HomePage() {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center">
       <div className="w-full py-8 text-center">
-        <h1 className="text-md">Welcome, {firstName}!</h1>
+        <h1 className="text-xl">Welcome, {firstName}!</h1>
         <UserButton />
       </div>
     </div>

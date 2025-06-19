@@ -21,9 +21,8 @@ function RootLayout() {
         key={location.pathname}
         fallback={<div>Something went wrong!</div>}
       >
-        <div className="flex h-screen bg-red-500">
+        <div className="flex h-screen">
           <Outlet />
-          devsdafs
         </div>
         <Toaster />
       </ErrorBoundary>
