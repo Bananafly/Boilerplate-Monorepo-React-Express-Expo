@@ -11,6 +11,7 @@
     "dev": "turbo run dev",
     "dev:web": "turbo run dev --filter=@monorepo/web",
     "dev:api": "turbo run dev --filter=@monorepo/api",
+    "dev:mobile": "turbo run dev --filter=@monorepo/mobile",
     "build": "turbo run build",
     "start": "node apps/api/dist/index.ts",
     "lint": "turbo run lint",
